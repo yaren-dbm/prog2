@@ -17,3 +17,5 @@ Seit längerem befasse ich mich intensiv mit der gesunden Ernährung sowie der a
 * Dateneingabe: Jeden Tag eingeben, wie viel man sich bewegt hat. Sei es ein Spaziergang, Jogging, Krafttraining etc.
 * Datenverarbeitung: Verbrennung der Kalorien wird gezählt
 * Datenausgabe: Verbrennte Kalorien werden der zugenommenen Kalorien abgezählt. 
+  
+![Bild 1](Kalorienzähler.jpg)
