@@ -3,7 +3,7 @@
 ## Ausgangslage
 Der Trend um Ernährung ist steigend.
 Es wird eine gewisse Disziplin, Wissen und Geduld benötigt um gesund und ausgewogen zu leben.
-Wie schön wäre es, wenn man für sich selber ein massgeschneidertes Programm hätte, welches einem sagt, wie viel Kalorien die gegessene Mahlzeit hat und wie viel Kalorien noch zu sich für ein gesundes Leben eingenommen werden darf ?
+Wie schön wäre es, wenn man für sich selber ein massgeschneidertes Programm hätte, welches einem sagt, wie viel Kalorien die gegessene Mahlzeit hat und wie viel Kalorien noch zu sich für eine gesunde Ernährung eingenommen werden darf ?
 
 ## Funktion / Projektidee
 Seit längerem befasse ich mich intensiv mit der gesunden Ernährung. Auch ist bemerkbar, dass ab einem gewissen Alter der menschliche Metabolismus (Stoffwechsel) nicht mehr wie gewohnt funktioniert. Ich habe bereits mehrere Apps getestet, welche das eigene Essverhalten beurteilen, Daten aufnehmen und auswerten.
