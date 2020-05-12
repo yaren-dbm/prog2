@@ -18,6 +18,7 @@ Mit dieser Webapplikation möchte ich mein eigenes App, gekoppelt mit für mich 
 ## Workflow Bewegung (optional)
 * Dateneingabe: Jeden Tag eingeben, wie viel man sich bewegt hat. Sei es ein Spaziergang, Jogging, Krafttraining etc.
 * Datenverarbeitung: Verbrennung der Kalorien wird gezählt
-* Datenausgabe: Verbrennte Kalorien werden der zugenommenen Kalorien abgezählt. 
-  
+* Datenausgabe: Verbrennte Kalorien werden der zugenommenen Kalorien abgezählt.
+
+##  
 ![Bild 1](Kalorienzähler.jpg)
