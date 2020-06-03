@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Ernährungsapplikation</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+ 
+<body>
+
+
+<header>
+    <div class="container">
+        <div id="branding">
+        <a href="startseite.html" class="button_titel">Ernährungsapplikation</a>
+        </div>
+
+        
+<nav>
+    <ul>
+        <!-- Navigation-->
+        <li class="current">
+        <a href="index.html">BMI Rechner</a></li>
+        <li><a href="auswertung.html">Auswertung</a></li>
+    </ul>               
+</nav>
+
+
+</div>
+        
+ 
+</header>
+
+<h1> BMI Rechner </h1>
+
+<p>
+
+<div class="main">
+<form method="POST">
+
+    Wie viel wiegst du?
+
+ <br>
+ <br>
+
+     <input type="text" name="gewicht" placeholder="Bitte in kg eingeben">
+
+ <br>
+ <br>
+
+    Wie gross bist du?
+
+ <br>
+ <br>
+
+    <input type="text" name="grösse" placeholder="Bitte in cm eingeben">
+
+<br>
+<br>
+
+    <button type="submit">BMI berechnen</button>
+
+</form>
+
+</p>
+
+</div>
+
+
+<br>
+
+<div class="berechnung">
+
+    {% if bmi %}
+
+        <p>
+
+        {% print("Dein persönlicher BMI: {}.".format(bmi)) %}
+
+        </p>
+
+    {% endif %}
+
+</div>
+
+
+</body>
+
+</html>
