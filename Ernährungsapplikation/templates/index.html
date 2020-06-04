@@ -36,13 +36,13 @@
 
 <p>
 
-<div class="main">
+<div class="main">       <!--Formular BMI Rechner-->
 <form method="POST">
 
     Wie viel wiegst du?
 
  <br>
- <br>
+ <br>                <!--Das Attribut name ist hier der Schlüssel (key)-->
 
      <input type="text" name="gewicht" placeholder="Bitte in kg eingeben">
 
@@ -72,13 +72,22 @@
 
 <div class="berechnung">
 
-    {% if bmi %}
+    <!--Jinja2 Logik / BMI Berechnung + Auswertung-->
 
-        <p>
+    {% if bmi <=18.5 %}
+        <p>{% print("Du bist untergewichtigt. Dein persönlicher BMI ist: {}.".format(bmi)) %}</p>
 
-        {% print("Dein persönlicher BMI: {}.".format(bmi)) %}
+    {% elif (bmi >=18.5) and (bmi <=24.9) %}
+         <p>{% print("Du hast eine Normalgewicht. Dein persönlicher BMI ist: {}.".format(bmi)) %}</p>
 
-        </p>
+    {% elif (bmi >=25) and (bmi <=29.9) %}
+         <p>{% print("Du bist übergewichtigt. Dein persönlicher BMI ist: {}.".format(bmi)) %}</p>
+
+    {% elif bmi >=30 %}
+         <p>{% print("Du leidest unter Fettleibigkeit (Adipositas). Dein persönlicher BMI ist: {}.".format(bmi)) %}</p>
+
+    {% else %}
+        <p>{% print("Dein persönlicher BMI ist: {}.".format(bmi)) %}</p>
 
     {% endif %}
 
