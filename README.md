@@ -16,4 +16,6 @@ Mit dieser Webapplikation möchte ich meinen eigenen BMI Rechner entwickeln. Die
 * Datenausgabe: <br> BMI Wert / Hinweis, ob man Normalgewicht hat oder nicht
 
 ##  
-![Bild 1](BMI.jpg)
+![Bild 1](Kalorienzähler.jpg)
+ <!--Quelle https://www.diabetes.co.uk/bmi/why-is-bmi-important.html-->
+S
