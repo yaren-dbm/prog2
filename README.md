@@ -17,5 +17,4 @@ Mit dieser Webapplikation möchte ich meinen eigenen BMI Rechner entwickeln. Die
 
 ##  
 ![Bild 1](Kalorienzähler.jpg)
- <!--Quelle https://www.diabetes.co.uk/bmi/why-is-bmi-important.html-->
-S
+ <!--Quelle: https://www.fitforfun.de/abnehmen/lifesum-im-test-lifestyletracker-und-kalorienzaehler-im-handy-bringt-das-was-190660.html-->
