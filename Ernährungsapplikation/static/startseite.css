@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 17px;
+    color: black;
+    line-height: 1.6em; 
+    
+}
+
+#showcase {
+
+    padding-left: 20px;
+}
+
+#showcase h1{
+    font-size: 50px;
+    line-height: 1.2em;
+    text-align: left;
+    padding-top: 20px;
+}
+
+
+#showcase p{
+    font-size: 20px;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#showcase .button{
+    font-size: 18px ;
+    text-decoration: none;
+    text-align: right;
+    color: black;
+    border: black 1px solid;
+    margin-right: auto;
+    padding: 10px 10px;
+    border-radius: 40px;
+}
+
+#showcase .button:hover{
+    background: darkgrey;
+    color: white;
+}  
