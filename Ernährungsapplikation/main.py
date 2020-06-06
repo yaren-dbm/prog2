@@ -9,57 +9,72 @@ app = Flask("Ernährungsapplikation")
 
 
 
-@app.route("/startseite.html")
-def startseite():
-    return render_template('startseite.html')
 
-@app.route("/index.html")
-def rechner():
-    return render_template('index.html')
+@app.route("/berechnung", methods=['GET', 'POST'])
 
-@app.route("/auswertung.html")
-def auswertung():
-    return render_template('auswertung.html')
-    
- 
-
-
-@app.route('/index.html', methods=['GET', 'POST'])
-
-def bmi():
-
-    bmi = ''
+def berechnung():
 
     if request.method == 'POST':
 
-        gewicht = float(request.form.get('gewicht'))
+        name = request.form["name"]
+        gewicht = request.form["gewicht"]
+        grösse = float(request.form["grösse"])
+        bmi = round((float(gewicht) / ((float(grösse) / 100) ** 2)),1)
 
-        grösse = float(request.form.get('grösse'))
+           
 
-        bmi = bmi_rechner(gewicht, grösse)
-
-    return render_template("index.html", bmi=bmi)
-
-
-
-def bmi_rechner(gewicht, grösse):
-
-    return round((gewicht / ((grösse / 100) ** 2)), 1)
-
+        if bmi <= 18.5:
+            untergewicht = "Du bist untergewichtig. Dein persönlicher BMI ist: " + str(bmi)
+            return render_template("index.html", untergewicht=untergewicht)
+        elif bmi >=18.5 and bmi <=24.9:
+            normalgewicht = "Du hast eine Normalgewicht. Dein persönlicher BMI ist: " + str(bmi)
+            return render_template("index.html", normalgewicht=normalgewicht)
+        elif bmi >=25 and bmi <=29.9:
+            übergewicht = "Du bist übergewichtig. Dein persönlicher BMI ist: " + str(bmi)
+            return render_template("index.html", übergewicht=übergewicht)
+        elif bmi >=30:
+            fettleibigkeit = "Du leidest unter Fettleibigkeit (Adipositas). Dein persönlicher BMI ist: " + str(bmi)
+            return render_template("index.html", fettleibigkeit=fettleibigkeit)
+        else:
+            allgemein =  "Dein persönlicher BMI ist: " + str(bmi)
+            return render_template("index.html", allgemein=allgemein)
     
+
+    return render_template("index.html")
+
+
+
+
+@app.route("/speichern", methods=['GET', 'POST'])
+
+def aktivitaet_speichern():
+
+    if request.method == 'POST':
+
+        name = request.form["name"]
+        gewicht = request.form["gewicht"]
+        grösse = request.form["grösse"]
+
+        name, gewicht, grösse = daten.aktivitaet_speichern(name, gewicht, grösse)
+
+    return render_template("index.html")
+
+
+
+
+@app.route("/auswertung")
+
+def auswertung():
+    aktivitaeten=daten.aktivitaeten_laden()
+    
+
+    return render_template("auswertung.html", aktivitaeten=aktivitaeten)
+
+
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
-
-
-
-
-
-
-
-
-
-
-
-
 
