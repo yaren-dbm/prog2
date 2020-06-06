@@ -6,7 +6,7 @@
         <title>Ernährungsapplikation</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
- 
+
 <body>
 
 
@@ -15,85 +15,57 @@
         <div id="branding">
         <a href="startseite.html" class="button_titel">Ernährungsapplikation</a>
         </div>
-
         
 <nav>
     <ul>
         <!-- Navigation-->
         <li class="current">
-        <a href="index.html">BMI Rechner</a></li>
-        <li><a href="auswertung.html">Auswertung</a></li>
+            <a href="{{ url_for('berechnung') }}">BMI Rechner</a></li>
+        <li><a href="auswertung">Auswertung</a></li>
     </ul>               
 </nav>
 
-
 </div>
-        
- 
 </header>
+
+
 
 <h1> BMI Rechner </h1>
 
 <p>
-
 <div class="main">       <!--Formular BMI Rechner-->
 <form method="POST">
 
+    Wie ist dein Name?
+<br><br>
+ <input type="text" name="name" placeholder="Bitte den Namen eingeben">
+<br><br>
     Wie viel wiegst du?
-
- <br>
- <br>                <!--Das Attribut name ist hier der Schlüssel (key)-->
-
+ <br><br>                <!--Das Attribut name ist hier der Schlüssel (key)-->
      <input type="text" name="gewicht" placeholder="Bitte in kg eingeben">
-
- <br>
- <br>
-
+ <br><br>
     Wie gross bist du?
-
- <br>
- <br>
-
+ <br><br>
     <input type="text" name="grösse" placeholder="Bitte in cm eingeben">
-
-<br>
-<br>
-
-    <button type="submit">BMI berechnen</button>
-
+<br><br><br>
+    <button type="submit">BMI berechnen</button><br>  
 </form>
-
+</div>
 </p>
 
-</div>
 
-
-<br>
-
+<!--Hier ist die Auswertung ersichtlich-->
 <div class="berechnung">
-
-    <!--Jinja2 Logik / BMI Berechnung + Auswertung-->
-
-    {% if bmi <=18.5 %}
-        <p>{% print("Du bist untergewichtigt. Dein persönlicher BMI ist: {}.".format(bmi)) %}</p>
-
-    {% elif (bmi >=18.5) and (bmi <=24.9) %}
-         <p>{% print("Du hast eine Normalgewicht. Dein persönlicher BMI ist: {}.".format(bmi)) %}</p>
-
-    {% elif (bmi >=25) and (bmi <=29.9) %}
-         <p>{% print("Du bist übergewichtigt. Dein persönlicher BMI ist: {}.".format(bmi)) %}</p>
-
-    {% elif bmi >=30 %}
-         <p>{% print("Du leidest unter Fettleibigkeit (Adipositas). Dein persönlicher BMI ist: {}.".format(bmi)) %}</p>
-
-    {% else %}
-        <p>{% print("Dein persönlicher BMI ist: {}.".format(bmi)) %}</p>
-
-    {% endif %}
-
+    {{ untergewicht }}
+    {{ normalgewicht }}
+    {{ übergewicht }}
+    {{ fettleibigkeit }}
+    {{ allgemein }}
+<br><br><br>
 </div>
+
+
 
 
 </body>
-
 </html>
