@@ -16,22 +16,43 @@
         <a href="startseite.html" class="button_titel">Ernährungsapplikation</a>
         </div>
 
-        
 <nav>
     <ul>
         <!-- Navigation-->
-        <li><a href="index.html">BMI Rechner</a></li>
+        <li><a href="berechnung">BMI Rechner</a></li>
         <li class="current">
-        <a href="auswertung.html">Auswertung</a></li>
+         <a href="{{ url_for('auswertung') }}">Auswertung</a></li>
     </ul>               
 </nav>  
    
+</div>
+</header> 
 
-</div> 
 
 
-</header>
+<div class="berechnung">
+    {{ untergewicht }}
+    {{ normalgewicht }}
+    {{ übergewicht }}
+    {{ fettleibigkeit }}
+    {{ allgemein }}
+<br><br><br>
+</div>
+
+
+{% for key, value in aktivitaeten.items()%}
+
+{{key}}
+{{value}}
+{%endfor%}
+
+
+<div>
+{{aktivitaeten}}
+</div>
+
+
+
 
 </body>
-
 </html>
