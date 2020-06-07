@@ -10,10 +10,10 @@
 <body>
 
 
-<header>
+<header> <!--Button Ernährungsapplikation, von dort kommt man auf die Startseite-->
     <div class="container">
         <div id="branding">
-        <a href="startseite.html" class="button_titel">Ernährungsapplikation</a>
+        <a href="startseite" class="button_titel">Ernährungsapplikation</a>
         </div>
         
 <nav>
@@ -29,11 +29,11 @@
 </header>
 
 
-
 <h1> BMI Rechner </h1>
 
-<p>
-<div class="main">       <!--Formular BMI Rechner-->
+
+<!--Formular BMI Rechner-->
+<div class="main">       
 <form method="POST">
 
     Wie ist dein Name?
@@ -48,13 +48,13 @@
  <br><br>
     <input type="text" name="grösse" placeholder="Bitte in cm eingeben">
 <br><br><br>
-    <button type="submit">BMI berechnen</button><br>  
+    <button type="submit">BMI berechnen</button>
+<br><br><br>
 </form>
 </div>
-</p>
 
 
-<!--Hier ist die Auswertung ersichtlich-->
+<!--Hier ist die Auswertung der BMI-Berechnung ersichtlich-->
 <div class="berechnung">
     {{ untergewicht }}
     {{ normalgewicht }}
@@ -63,7 +63,6 @@
     {{ allgemein }}
 <br><br><br>
 </div>
-
 
 
 
