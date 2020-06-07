@@ -10,10 +10,10 @@
 <body> 
 
 
-<header>
+<header> <!--Button Ernährungsapplikation, von dort kommt man auf die Startseite-->
     <div class="container">
         <div id="branding">
-        <a href="startseite.html" class="button_titel">Ernährungsapplikation</a>
+        <a href="startseite" class="button_titel">Ernährungsapplikation</a>
         </div>
 
 <nav>
@@ -29,27 +29,27 @@
 </header> 
 
 
+<!--Tabelle mit den Daten: Eingabe, Gewicht, Name-->
+<table class="centered thick-border" style="font-family: Arial, Helvetica, sans-serif; color: black; font-size: 20px; padding-left: 100px;width:70%;padding-top: 150px;">
+    <tr>
+    <tr>
 
-<div class="berechnung">
-    {{ untergewicht }}
-    {{ normalgewicht }}
-    {{ übergewicht }}
-    {{ fettleibigkeit }}
-    {{ allgemein }}
-<br><br><br>
-</div>
+            <th ALIGN="LEFT" style="text-decoration: underline">Eingaben</th>
+            <th ALIGN="LEFT" style="text-decoration: underline">Gewicht in kg</th>
+            <th ALIGN="LEFT" style="text-decoration: underline">Name</th>
+    </tr>
 
+    {% for i, (n, p) in nummeriert%} <!--(n, p) bedeutet, dass enumerate durch keys und values-->
 
-{% for key, value in aktivitaeten.items()%}
+        <tr>
+            <td ALIGN="LEFT">{{i}}</td>
+            <td ALIGN="LEFT">{{p}}</td>
+            <td ALIGN="LEFT">{{n}}</td>
+        </tr>
 
-{{key}}
-{{value}}
-{%endfor%}
-
-
-<div>
-{{aktivitaeten}}
-</div>
+    {% endfor %}
+</tr>
+</table>
 
 
 
