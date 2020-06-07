@@ -1,6 +1,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    color: black;
+    font-size: 20px;
     line-height: 1.5em;
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     padding: 0;
@@ -12,21 +13,12 @@ body{
 }
 
 h1{
-    padding-top: 120px;
+    padding-top: 130px;
     font-size: 25px;
     float: left;
     padding-left: 100px;
 }
 
-
-
-p{
-    font-size: 20px;
-    text-align: left;
-    padding-bottom: 20px;
-    padding-left: 100px;
-
-}
 
 
 /* Branding Ernährungsapplikation */
@@ -48,9 +40,9 @@ p{
 
 /* Header */
 header{
-    background: darkgrey;
+    background: #49B675;
     color: white;
-    padding-top: 30px;
+    padding-top: 25px;
     min-height: 70px;
     width: 100%;
     position: fixed;
@@ -99,9 +91,8 @@ header nav{
 
 .main {
 
-    padding-top: 180px;
+    padding-top: 220px;
     padding-left: 100px;
-    padding-right: 100px;
     text-align: left;
 
 }
@@ -109,7 +100,16 @@ header nav{
 .berechnung {
 
     padding-left: 100px;
-    padding-right: 100px;
+    text-align: left;
+    color: black;
+
+}
+
+
+.auswertung {
+
+    padding-top: 220px;
+    padding-left: 100px;
     text-align: left;
     color: black;
 
