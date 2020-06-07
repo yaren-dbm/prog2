@@ -2,7 +2,7 @@ import json
 
 
 
-def speichern(datei, grösse, gewicht, name):
+def speichern(datei, key, value, name):
 
     try:
         with open(datei) as open_file:
@@ -11,7 +11,7 @@ def speichern(datei, grösse, gewicht, name):
     except FileNotFoundError:
         datei_inhalt = {}
 
-    datei_inhalt[grösse] = {"gewicht": gewicht, "grösse": name}
+    datei_inhalt[name] = value
 
 
     # print(datei_inhalt)
@@ -23,18 +23,19 @@ def speichern(datei, grösse, gewicht, name):
 
 
 
-def aktivitaet_speichern(grösse, gewicht, name):
+def eingaben_speichern(name, gewicht):
 
-    datei_name = "aktivitaeten.json"
-    speichern(datei_name, grösse, gewicht, name)
+    datei_name = "auswertung.json"
 
-    return grösse, gewicht, name
+    speichern(datei_name, name, gewicht)
+
+    return name, gewicht
 
 
 
 
-def aktivitaeten_laden():
-    datei_name = "aktivitaeten.json"
+def eingaben_laden():
+    datei_name = "auswertung.json"
 
     try:
         with open(datei_name) as open_file:
