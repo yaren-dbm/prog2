@@ -16,7 +16,7 @@ h1{
     padding-top: 130px;
     font-size: 25px;
     float: left;
-    padding-left: 100px;
+    padding-left: 200px;
 }
 
 
@@ -92,16 +92,18 @@ header nav{
 .main {
 
     padding-top: 220px;
-    padding-left: 100px;
+    padding-left: 200px;
     text-align: left;
+    font-weight: bold;
 
 }
 
 .berechnung {
 
-    padding-left: 100px;
+    padding-left: 200px;
     text-align: left;
-    color: black;
+    color: #49B675 ;
+    font-weight: bold;
 
 }
 
@@ -109,8 +111,50 @@ header nav{
 .auswertung {
 
     padding-top: 220px;
-    padding-left: 100px;
+    padding-left: 200px;
     text-align: left;
     color: black;
 
+}
+
+
+
+/* Footer */
+.footer {
+    margin-left: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    background: #49B675;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px;
+    display: block;    
+}
+/* Text: Anschrift */
+.footer h4{
+    float: left;
+    margin-left: 30px;
+    letter-spacing: 0.4em;
+    font-size: 10px;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+
+/* icons */
+.icons{
+    text-align: right;
+    padding-top: 15px;
+    padding-right: 20px;
+    font-size: 30px;
+    letter-spacing: 0.4em;   
+}
+
+.footer a:hover{
+    color:black;
+    transition: color 0.5s ease;
 }
