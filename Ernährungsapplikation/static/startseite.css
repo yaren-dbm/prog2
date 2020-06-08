@@ -15,22 +15,22 @@ body{
 
 #showcase {
 
-    padding-left: 20px;
+    text-align: center;
 }
 
 #showcase h1{
     font-size: 50px;
     line-height: 1.2em;
-    text-align: left;
+    text-align: center;
     padding-top: 20px;
 }
 
 
 #showcase p{
     font-size: 20px;
-    text-align: left;
+    text-align: center;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 #showcase .button{
