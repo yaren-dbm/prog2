@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-
-<html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <title>Ernährungsapplikation</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-    </head>
+{% include "header.html" %}
 
 <body> 
 
@@ -35,16 +28,16 @@
     <tr>
 
             <th ALIGN="LEFT" style="text-decoration: underline">Eingaben</th>
-            <th ALIGN="LEFT" style="text-decoration: underline">Gewicht in kg</th>
             <th ALIGN="LEFT" style="text-decoration: underline">Name</th>
+            <th ALIGN="LEFT" style="text-decoration: underline">Gewicht in kg</th>
     </tr>
 
     {% for i, (n, p) in nummeriert%} <!--(n, p) bedeutet, dass enumerate durch keys und values-->
 
         <tr>
             <td ALIGN="LEFT">{{i}}</td>
-            <td ALIGN="LEFT">{{p}}</td>
             <td ALIGN="LEFT">{{n}}</td>
+            <td ALIGN="LEFT">{{p}}</td>
         </tr>
 
     {% endfor %}
@@ -52,7 +45,13 @@
 </table>
 
 
+<br>
+<br>
+<br>
+<br>
 
 
-</body>
-</html>
+
+
+
+{% include "footer.html" %}
