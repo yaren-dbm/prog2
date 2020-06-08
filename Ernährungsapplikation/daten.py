@@ -11,7 +11,7 @@ def speichern(datei, key, value, name):
     except FileNotFoundError:
         datei_inhalt = {}
 
-    datei_inhalt[name] = value
+    datei_inhalt[name] = str(gewicht)
 
 
     # print(datei_inhalt)
